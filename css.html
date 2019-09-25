@@ -5,22 +5,140 @@
    <meta charset="utf-8" />
    <link rel="stylesheet" type="text/css" href="default.css" />
 
+   <style>
+   #embeded{
+       color: green;
+       font-size: 30px;
+
+   }
+   /* 전체 선택자 */
+   *{
+      color: violet;
+
+   }
+   /* css 주석 */
    
+   </style>
+   <!-- html 주석 -->
+
 
 
 
 
  </head>
  <body>
+    <a href="index.html">돌아가기</a>
+    <br>
      <div id="external">external 방식 </div>
-       
+     <div id="embeded">embeded 방식</div>
+     <div id="inline" style="color: yellow;">inline 방식</div>
+    내용
+     <b>볼드체</b>
+
+    <style>
+    /* 클래스 선택자 */
+      .c_name { color: green; }
+      /* 아이디 선택자 */
+      #i_name{ color: purple;}
+    </style>
+    <div class= "c_name">클래스 선택자</div>
+    <div class= "c_name">클래스 선택자</div>
+    <div id= "i_name">아이디 선택자</div>
+    
+      <style>
+          /* 가상요소 선택자 */
+          #name_a:before{ content: "시작"; }
+          #name_a:after{ content: "끝"; }
+          #name_a:first-letter{ font-size: 300px; }
+          #name_a:first-line{ color: pink; }
+      </style>
+      <div id="name_a">빠끄빠끄빠끄빠끄빠끄빠끄빠끄</div>
+      <style>
+          /* 가상클래스 선택자 */
+          .li1:first-child{ color: red; }
+          .li1:last-child{ color: blue; }
+          .li1:nth-child(2){ color: green; }
+          /* 1st, 2nd, 3rd, 4th ... nth */
+          /*:link기본, :visited방문후, :hover마우스 올림,
+           :active누름, :focus집중*/ 
+           a:link{ color: black; text-decoration: none; }
+           a:visited{ color: red; }
+           a:hover { color: blue;  font-size: 20px; }
+           a:active { color: yellow; }
+           a:focus{ color: green;}
+      
+      </style>
+      <ul> <!-- parent 부모 -->
+          <li class="li1">리스트1</li> <!-- child 자식-->
+          <li class="li1">리스트2</li>
+          <li class="li1">리스트3</li>
+          <li class="li1">리스트4</li>
+     </ul>
+     <a href="#">링크 버튼</a>
+     <style>
+         /* 하위 선택자 */
+         div li{ color: red; }
+         /* 자식 선택자*/
+         div>ul>li{ text-decoration: underline; }
+         /* 선택자 그룹화 */
+         div { color: red; }
+         #i_1,#i_2,#i_3{ color: purple; }
+     </style>
+     <div>
+         <ul>
+             <li>리스트1</li>
+             <li>리스트2</li>
+             <li>리스트3</li>
+         </ul>
+
+
+
 
      </div>
+     <div id="i_1">첫번쨰</div>
+     <div id="i_1">두번쨰</div>
+     <div id="i_1">세번쨰</div>
+     
+     
+     <style type="text/css">
+        .cascade {color:green;}
+        #specifi {color:blue;}
+     </style>
+     <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+     <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+     <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>
+     <style>
+         color_test
+         {
+             color: blue;
+             color: #000; /* #rgb, 0~f(16진수) */
+             color: #ff2c8d; /* #rrggbb, 0~f(16진수) */
+             color: rgb(0,0,255); /* 0~255 */
+             color: rgb(0,0,100%); /* 0~100% */
+         }
+     </style>
+     <div id="color_test">color_test</div>
 
-
-
-
-
+     <style>
+      #box_model,#inline_model{
+          border: solid 1px black; 
+          /* 경계선: 실선 1px 두께 검은색; */
+          width: 200px; 
+          /* 가로 길이 */
+          height: 200px; /* 세로 길이 */
+          /* margin 바깥 여백 */
+          margin: 100px;
+          /* padding 안쪽 여백 */
+          padding: 100px;
+          position: static; /*기본 static(정적인, 멈춤)*/
+          /* static 정적인 , relative 관계형, absolute 절대적, fixed 고정형 */
+          left: 100px;
+          top: 100px;
+      }
+     </style>
+     <div id="box_model">박스모델</div>
+     <span id="inline_model">인라인모델</span>
+        
 
  </body>
 
