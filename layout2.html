@@ -5,9 +5,13 @@
         <meta charset="utf-8" />
         <style>
             /* css 작성하는 곳 */
+            body{
+                margin: 0px;
+            }
             header{
                 background-color: #02918c;
                 color: white;
+                padding: 10px 50px; /* 상하 좌우 */
             }
             header>h1{
                 margin: 0px;
@@ -78,7 +82,46 @@
                 margin: 50px 0px;
             }
             section p{
-                margin: 50px 0px;
+                margin: 50px 100px;
+            }
+            section #about_list{
+                padding: 0px;
+                margin: 0px 50px;
+            }
+            section dd{
+                margin: 0px;
+            }
+            section>#about_list>li{
+                float: left;
+                width: 200px; /* 고정값 */
+                width: calc(25% - (1px / 4 *3) - 30px - 30px);
+
+                list-style: none;
+                border-right: solid 1px gray;
+                padding: 30px;
+            }
+            section>#about_list>li:nth-child(4){
+                border: none;
+            }
+            #work_list>li{
+                float:left;
+                list-style: none;
+                width: 25%;
+            }
+            #work_list img{
+                width: 100%; /* 있을수 있는 공간 100% 기준 */
+                display: inline; /* 원래 이미징의 출력방식 */
+                display: block; /* 블록형으로 변경 */
+            }
+            #work_list{
+                padding: 0px;
+                margin: 0px;
+            }
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
     </head>
@@ -103,7 +146,7 @@
             </header>
             <div id="main_visual">
                 <div id="title_top">Lorem ipsum dolor sit iusmod tempor</div>
-                <h2>incididunt bore</h2>
+                <h2>INCIDIDUNT BORE</h2>
                 <div id="title_buttom">Orem ipsum dolor sit amet, consectetur</div>
                 <img src="images/layout2_button.jpg"/>
             </div>
@@ -123,7 +166,7 @@
                      aliquip ex ea commodo consequatduis
                      aute irure dolor.
                 </p>
-                <ul>
+                <ul id="about_list">
                     <li>
                         <img src="images/layout2_icon1.jpg" />
                         <dl>
@@ -136,7 +179,7 @@
                         </dl>
                     </li>
                     <li>
-                        <img src="images/layout2_icon1.jpg" />
+                        <img src="images/layout2_icon2.jpg" />
                         <dl>
                             <dt>Title goes here</dt>
                             <dd>
@@ -147,7 +190,7 @@
                         </dl>
                     </li>
                      <li>
-                        <img src="images/layout2_icon1.jpg" />
+                        <img src="images/layout2_icon3.jpg" />
                         <dl>
                             <dt>Title goes here</dt>
                             <dd>
@@ -158,7 +201,7 @@
                         </dl>
                     </li>
                      <li>
-                        <img src="images/layout2_icon1.jpg" />
+                        <img src="images/layout2_icon4.jpg" />
                         <dl>
                             <dt>Title goes here</dt>
                             <dd>
@@ -168,6 +211,25 @@
                             </dd>
                         </dl>
                     </li>
+                <div class="clear"></div>
+                </ul>
+            </section>
+            <section>
+                <h3>MY WORK</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor 
+                    incididunt ut labore et dolore magnaaliqua.
+                </p>
+                <ul id="work_list">
+                    <li><img src="images/layout2_pic1.jpg"/></li>
+                    <li><img src="images/layout2_pic2.jpg"/></li>
+                    <li><img src="images/layout2_pic3.jpg"/></li>
+                    <li><img src="images/layout2_pic4.jpg"/></li>
+                    <li><img src="images/layout2_pic5.jpg"/></li>
+                    <li><img src="images/layout2_pic6.jpg"/></li>
+                    <li><img src="images/layout2_pic7.jpg"/></li>
+                    <li><img src="images/layout2_pic8.jpg"/></li>
+                    <div class="clear"></div>
                 </ul>
             </section>
         </div>
